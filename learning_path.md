@@ -1,103 +1,102 @@
-# Learning Bash Command Line: Checklist
+## Imparare la riga di comando Bash: Checklist
 
-Level 1: Beginner
+### Livello 1: Principiante
 =================
 
-1.1 Navigate directories
+1.1 Navigare nelle directory
 ------------------------
 
--   Check the current working directory with pwd
--   List contents of the current directory with ls -la
--   Change the current directory both up and down with cd
--   Explain the difference between a relative and absolute path
--   Type faster with the shortcuts \[TAB\] and \[UPARROW\]
+- Controllare la directory di lavoro corrente con `pwd`
+- Elencare il contenuto della directory corrente con `ls -la`
+- Cambiare la directory corrente sia verso l'alto che verso il basso con `cd`
+- Spiegare la differenza tra un percorso relativo e assoluto
+- Digitare più velocemente con i tasti di scelta rapida `TAB` e `UPARROW`
 
-1.2 Inspect text files
+1.2 Esaminare i file di testo
 ----------------------
 
--   List the contents of a file with cat, less or more
--   Search words inside text files with grep
--   Display differences between text files with diff
--   Edit a text file with nano or vi/vim
+- Elencare il contenuto di un file con `cat`, `less` o `more`
+- Cercare parole all'interno di file di testo con `grep`
+- Visualizzare le differenze tra file di testo con `diff`
+- Modificare un file di testo con `nano` o `vi/vim`
 
-1.3 Copy and move files
+1.3 Copiare e spostare file
 -----------------------
 
--   Copy one or many files with cp
--   Rename or move a file or directory with mv
--   Remove a file with rm
--   Remove a directory with rmdir
+- Copiare uno o più file con `cp`
+- Rinominare o spostare un file o una directory con `mv`
+- Rimuovere un file con `rm`
+- Rimuovere una directory con `rmdir`
 
-Level 2: Intermediate
+### Livello 2: Intermedio
 =====================
 
-2.1 Permissions
+2.1 Permessi
 ---------------
 
--   Change permissions on a file with chmod
--   Explain the meaning of the 9 permissions bits on a file
--   Change ownership of a file with chown or chgrp
--   Override user privileges with sudo
+- Cambiare i permessi di un file con `chmod`
+- Spiegare il significato dei 9 bit di permesso su un file
+- Cambiare la proprietà di un file con `chown` o `chgrp`
+- Ignorare i privilegi utente con `sudo`
 
-2.2 Pipes
+2.2 Pipe
 ---------
 
--   Redirect output of a program to a text file
--   Redirect output of a program to another program
--   filter, sort, dedup and count lines/words within a pipeline
--   Separate the `stdout` and `stderr` streams
+- Reindirizzare l'output di un programma a un file di testo
+- Reindirizzare l'output di un programma a un altro programma
+- Filtrare, ordinare, deduplicare e contare righe/parole all'interno di una pipeline
+- Separare i flussi `stdout` e `stderr`
 
-2.3 Networking
+2.3 Rete
 --------------
 
--   Log into a remote system with ssh
--   Copy files to/from a remote system with scp
--   Download a file from the web with curl or wget
+- Accedere a un sistema remoto con `ssh`
+- Copiare file tra un sistema remoto e locale con `scp`
+- Scaricare un file dal Web con `curl` o `wget`
 
-2.4 System checks
+2.4 Controlli di sistema
 -----------------
 
--   Check disk usage with df
--   Check directory sizes with du
--   List running processes with pwd or top
--   Kill a process with kill or xkill
+- Controllare l'utilizzo del disco con `df`
+- Controllare le dimensioni delle directory con `du`
+- Elencare i processi in esecuzione con `pwd` o `top`
+- Terminare un processo con `kill` o `xkill`
 
-2.5 System administration
+2.5 Amministrazione di sistema
 -------------------------
 
--   Set an environment variable with `export`
--   Set an environment variable permanently in your .bashrc file
--   Execute a bash script with source
--   Install a program with apt (Debian/Ubuntu) or yum (RedHat)
--   Compile a program using `make`
--   Install Linux on your laptop
--   Explain what directories like /bin, /usr, /etc and /boot contain
--   Add multiple users and groups
+- Impostare una variabile d'ambiente con `export`
+- Impostare una variabile d'ambiente in modo permanente nel file `.bashrc`
+- Eseguire uno script bash con `source`
+- Installare un programma con `apt` (Debian/Ubuntu) o `yum` (RedHat)
+- Compilare un programma usando `make`
+- Installare Linux sul tuo laptop
+- Spiegare cosa contengono directory come `/bin`, `/usr`, `/etc` e `/boot`
+- Aggiungere più utenti e gruppi
 
-Level 3: Advanced
+### Livello 3: Avanzato
 =================
 
-3.1 Administration
+3.1 Amministrazione
 -------------------
 
--   Start a cronjob
--   Configure a service in the /env directory
--   Know the differences between Linux distributions
--   Compile a package from scratch
--   Load kernel modules or compile a Linux kernel
+- Avviare un cronjob
+- Configurare un servizio nella directory `/env`
+- Conoscere le differenze tra le distribuzioni Linux
+- Compilare un pacchetto da zero
+- Caricare moduli del kernel o compilare un kernel Linux
 
-3.2 Networking
+3.2 Rete
 --------------
 
--   Run tools to analyze network traffic
--   Configure a local network
--   Install Linux on multiple remote machines simultaneously
+- Eseguire strumenti per analizzare il traffico di rete
+- Configurare una rete locale
+- Installare Linux su più macchine remote contemporaneamente
 
-3.3. Scripting
+3.3 Scripting
 --------------
 
--   Write an installer script for a remote machine
--   Write bash scripts that contain variables, loops and conditional
-    statements
--   Process system logs automatically
--   Enumerate more than 50 bash commands
+- Scrivere uno script di installazione per una macchina remota
+- Scrivere script bash che contengono variabili, loop e dichiarazioni condizionali
+- Elaborare i log di sistema automaticamente
+- Enumerare più di 50 comandi bash

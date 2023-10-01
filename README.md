@@ -1,359 +1,358 @@
-The Bash Command Line
+La riga di comando di Bash
 =====================
 
-![*Tux, the Linux penguin*](tux.png)
+![*Tux, il pinguino Linux*](tux.png)
 
-This tutorial makes you familiar with **bash**, the Linux command line. You will learn to:
+Questo tutorial ti renderà familiare con **bash**, la linea di comando di Linux. Imparerai a:
 
-* navigate directories
-* manipulate files
-* execute programs
+- navigare nelle directory
+- manipolare file
+- eseguire programmi
 
-If you have no previous experience with Unix-like
-systems or know a few commands but would like to know more, this tutorial is for you.
+Se non hai esperienza precedente con sistemi simili a Unix o conosci alcuni comandi ma vuoi saperne di più, questo tutorial è per te.
 
-### Prerequisites
+### Prerequisiti
 
-*This tutorial was prepared for Ubuntu Linux, but it works on MacOS,
-Cygwin and the Git bash as well, given that Python 3 is installed on
-your system.*
+*Questo tutorial è stato preparato per Ubuntu Linux, ma funziona anche su MacOS,
+Cygwin e Git bash, a condizione che Python 3 sia installato nel
+sistema.*
 
 ----
 
-## Goal
+## Obiettivo
 
-In this tutorial, you will be looking for a word with 22 characters:
+In questo tutorial, cercherai una parola di 22 caratteri:
 
 ![](solution.png)
 
-All characters are hidden in the exercises below.
+Tutti i caratteri sono nascosti negli esercizi seguenti.
 
-## Preparations
+## Preparativi
 
-* clone the repository or download the code as a ZIP file
-* locate the  `exercises/` folder
-* open a `bash` terminal
+* clona il repository o scarica il codice come file ZIP
+* individua la cartella `exercises/`
+* apri un terminale `bash`
 
 ![](preparations.png)
 
 ----
 
-## 1. Directories and files
+## 1. Directory e file
 
 
-### 1.1. Navigating directories
+### 1.1. Navigare nelle directory
 
-The **first character** is hidden in a file somewhere in the *exercise1*
-directory tree. Use the commands
+Il **primo carattere** è nascosto in un file da qualche parte nella struttura delle directory di *exercise1*.
+Utilizza i comandi
 
-``` {.sourceCode .bash}
-cd <directory_name>
+```bash
+cd <nome_cartella>
 ```
 
-(do not type the pointy brackets, just insert the directory name) and
+(non digitare le parentesi angolari, inserisci solo il nome della cartella) e
 
-``` {.sourceCode .bash}
+```bash
 ls
 ```
 
-to move from one directory to the next. Look through subdirectories
-until you find one with the name `solution_1.1` and list its contents.
-If you went to a wrong directory, you can go back one level by typing:
+(per spostarti da una directory all'altra). Esplora le sottodirectory
+fino a trovarne una con il nome `solution_1.1` e elenca i suoi contenuti.
+Se sei entrato in una cartella sbagliata, puoi tornare indietro di un livello digitando:
 
-``` {.sourceCode .bash}
+```bash
 cd ..
 ```
 
-or go back to your home folder:
+oppure tornare alla tua cartella home:
 
-``` {.sourceCode .bash}
+```bash
 cd
 ```
 
-### 1.2. Show a hidden file
+### 1.2. Mostra un file nascosto
 
-Some files are not visible immediately. To see them, you need the
-command
+Alcuni file non sono immediatamente visibili. Per vederli, hai bisogno del
+comando
 
-``` {.sourceCode .bash}
+```bash
 ls -a
 ```
 
-The **second character**, is in the same directory as the first one, but
-in a hidden file.
+Il **secondo carattere** è nella stessa directory del primo, ma
+in un file nascosto.
 
-### 1.3. Execute a program
+### 1.3. Esegui un programma
 
-Use cd .. to go back to the directory `exercise_1/directoryB/`. When
-listing its contents, you should see a **shell script file**
-`program.sh`. To find the **third character**, you need to execute the
-program. On bash, this is done by typing source and the name of the
-program:
+Usa `cd ..` per tornare alla directory `exercise_1/directoryB/`. Quando
+elencate i suoi contenuti, dovresti vedere un **file di script shell**
+`program.sh`. Per trovare il **terzo carattere**, devi eseguire il
+programma. In bash, ciò viene fatto digitando `source` e il nome del
+programma:
 
-``` {.sourceCode .bash}
+```bash
 source program.sh
 ```
 
-### 1.4. Find out how big a file is
+### 1.4. Scopri quanto è grande un file
 
-Go to the folder `exercise_1/directoryC/`. To find **the fourth
-character**, you need to find out how big the text file in the directory
-is. This is done with the command
+Vai alla cartella `exercise_1/directoryC/`. Per trovare **il quarto
+carattere**, devi scoprire quanto è grande il file di testo nella cartella.
+Questo si fa con il comando
 
-``` {.sourceCode .bash}
+```bash
 ls -l
 ```
 
-In the table the command produces, you will find the file size in bytes,
-the file’s owner, permissions to read and modify it, and the date/time
-of the last modification.
+Nella tabella prodotta dal comando, troverai la dimensione del file in byte,
+il proprietario del file, le autorizzazioni per leggerlo e modificarlo, e la data/ora
+della sua ultima modifica.
 
-To obtain the fourth character look up the file size in the [Table of
-printable ASCII
-characters](https://en.wikipedia.org/wiki/ASCII#Printable_characters):
+Per ottenere il quarto carattere, cerca la dimensione del file nella [Tabella di
+caratteri ASCII stampabili](https://en.wikipedia.org/wiki/ASCII#Printable_characters):
 
 ![](ASCII-Table-wide.svg)
 
-*ASCII Table, Public Domain*
+*Tabella ASCII, Pubblico Dominio*
 
 <div class="admonition hint">
 
-When typing names of directories or files, press `[TAB]` after the first
-few characters. Unix tries to guess what you are typing.
+Quando digiti nomi di directory o file, premi `[TAB]` dopo i primi
+pochi caratteri. Unix cerca di indovinare ciò che stai digitando.
 
 </div>
 
 ----
 
-## 2. Edit text files
+## 2. Modifica file di testo
 
-Please use `cd ..` to go back to the top directory of the tutorial
-material. Then, change to the directory `exercise_2`.
+Usa `cd ..` per tornare alla directory principale del materiale del tutorial.
+Quindi, entra nella directory `exercise_2`.
 
-### 2.1. See what is in a text file
+### 2.1. Visualizza cosa c'è in un file di testo
 
-In the directory *exercise\_2/*, you will find a text file
-*solution\_2.1.txt*. The **fifth character** is inside that file. To see
-its contents, use the command
+Nella directory *exercise\_2/*, troverai un file di testo
+*solution\_2.1.txt*. Il **quinto carattere** è all'interno di quel file. Per vederne
+il contenuto, usa il comando
 
-``` {.sourceCode .bash}
-less <filename>
+```bash
+less <nomefile>
 ```
 
-### 2.2. Edit text files
+### 2.2. Modifica file di testo
 
-To get **character number six**, you will need to create a text file in
-the `exercise_2` directory. On Ubuntu, you can do this using the editor
-`nano`. You can start it typing the name of the program, or
+Per ottenere il **sesto carattere**, dovrai creare un file di testo in
+la directory `exercise_2`. Su Ubuntu, puoi farlo usando l'editor
+`nano`. Puoi avviarlo digitando il nome del programma, o
 
-``` {.sourceCode .bash}
-nano <filename>
+```bash
+nano <nomefile>
 ```
 
-**To exit nano, type Ctrl-X**
+**Per uscire da nano, digita Ctrl-X**
 
-Create a text file with the characters you have found so far.
+Crea un file di testo con i caratter
 
-The **sixth character** is the one you need to press to save a file in
+i che hai trovato finora.
+
+Il **sesto carattere** è quello che devi premere per salvare un file in
 `nano`.
 
 <div class="admonition hint">
 
-If you want to know more about a particular command, type
+Se vuoi saperne di più su un comando specifico, digita
 
-``` {.sourceCode .bash}
-man <command>
+```bash
+man <comando>
 ```
 
-You get shown a help page that you can leave by pressing 'q'.
+Verrà mostrata una pagina di aiuto che puoi chiudere premendo 'q'.
 
 </div>
 
 ----
 
-## 3. Copy and remove files
+## 3. Copia ed elimina file
 
-Please go to the directory exercise\_3.
+Vai alla directory `exercise_3`.
 
-### 3.1. Create a directory and copy a file to it.
+### 3.1. Crea una directory e copia un file in essa.
 
-To find **characters seven and eight**, you need to create a
-subdirectory named *solution* in `exercise_3/` and copy the files from
-the `part1/` and `part2/` folders into it.
+Per trovare **i caratteri sette e otto**, devi creare una
+sottodirectory chiamata *solution* in `exercise_3/` e copiare i file da
+le cartelle `part1/` e `part2/` dentro di essa.
 
-For creating directories, use the command:
+Per creare directory, usa il comando:
 
-``` {.sourceCode .bash}
-mkdir <directory name>
+```bash
+mkdir <nomedirectory>
 ```
 
-For copying, you can use the command
+Per copiare, puoi usare il comando
 
-``` {.sourceCode .bash}
-cp <filename from> <filename to>
+```bash
+cp <nomefile_da> <nomefile_a>
 ```
 
-Type `ls -l solution/*` afterwards to see the solution.
+Digita `ls -l solution/*` dopo per vedere la soluzione.
 
-### 3.2. Removing files
+### 3.2. Rimozione file
 
-In the `data` directory, all files with an `Y` need to be deleted. To do
-so, use the command:
+Nella directory `data`, devono essere eliminati tutti i file con una `Y`. Per farlo,
+usa il comando:
 
-``` {.sourceCode .bash}
-rm <filename>
+```bash
+rm <nomefile>
 ```
 
-Also, there are more files to be deleted in the *data* directory. To
-remove more than one file at once, you can use `*` as a wildcard, i.e.
-`rm ju*` will delete all of `junk.txt, juniper.txt` and `june.docx`.
+Inoltre, ci sono altri file da eliminare nella directory *data*. Per
+rimuovere più di un file alla volta, puoi usare `*` come carattere jolly, cioè
+`rm ju*` eliminerà tutti i file `junk.txt, juniper.txt` e `june.docx`.
 
-To get **characters nine and ten**, look at the files that remain after
-deleting all that contain a `Y`.
+Per ottenere **i caratteri nove e dieci**, guarda i file che rimangono dopo
+aver eliminato tutti quelli che contengono una `Y`.
 
 <div class="admonition hint">
 
-To remove an empty directory, you can use
+Per rimuovere una directory vuota, puoi usare
 
-``` {.sourceCode .bash}
-rmdir <directory name>
+```bash
+rmdir <nomedirectory>
 ```
 
-The command
+Il comando
 
-``` {.sourceCode .bash}
-rm -r <directory name>
+```bash
+rm -r <nomedirectory>
 ```
 
-deletes a directory and everything in it.
+elimina una directory e tutto ciò che contiene.
 
 </div>
 
 <div class="admonition warning">
 
-On Unix, it is not possible to undelete files!
+Su Unix, non è possibile recuperare i file eliminati!
 
-This makes removing files with the `*` symbol **very** dangerous,
-because you could wipe out everything with a single command (e.g. if you
-type the wrong directory by accident). Backups become an even better
-idea after learning this command.
+Questo rende la rimozione di file con il simbolo `*` **molto** pericolosa,
+perché potresti cancellare tutto con un singolo comando (ad esempio, se sbagli
+a digitare la directory per errore). Dopo aver imparato questo comando,
+i backup diventano un'idea ancora migliore.
 
 </div>
 
 ----
 
-## 4. Process text data
+## 4. Elaborazione dati di testo
 
-Please go to the directory exercise\_4.
+Vai alla directory `exercise_4`.
 
-### 4.1. comparing two files
+### 4.1. Confronto di due file
 
-There are two different versions of a quote, `ai.txt`, and
-`artificial_intelligence.txt`. To find out, how they differ, Unix
-provides the command
+Ci sono due versioni diverse di una citazione, `ai.txt` e
+`artificial_intelligence.txt`. Per scoprire come differiscono, Unix
+fornisce il comando
 
-``` {.sourceCode .bash}
-diff <filename1> <filename2>
+```bash
+diff <nomefile1> <nomefile2>
 ```
 
-Of course, you can look at the text first using `less` or `nano`. The
-**11th character** of the solution is the single character in which the
-two files differ.
+Naturalmente, puoi guardare il testo prima usando `less` o `nano`. Il
+**11° carattere** della soluzione è il singolo carattere in cui i due
+file differiscono.
 
-### 4.2. Sorting a text file
+### 4.2. Ordinamento di un file di testo
 
-Unix has a small program to sort text files alphabetically. It is called
-by
+Unix ha un piccolo programma per ordinare file di testo in ordine alfabetico. È chiamato
+usando
 
-``` {.sourceCode .bash}
-less <filename> | sort
+```bash
+less <nomefile> | sort
 ```
 
-The symbol '|' is called a pipe and is often used to connect Unix
-programs to each other. The **12th character** of the solution is the
-first character of the last word in the alphabetically sorted file
-elephant.txt.
+Il simbolo '|' è chiamato tubo ed è spesso usato per collegare programmi Unix
+tra loro. Il **12° carattere** della soluzione è il primo carattere dell'ultima parola nel file
+elephant.txt ordinato alfabeticamente.
 
 <div class="admonition hint">
 
-To store the sorted lines in a new file, you can add an output file,
-like
+Per memorizzare le righe ordinate in un nuovo file, puoi aggiungere un file di output,
+come
 
-``` {.sourceCode .bash}
-less <filename> | sort > result.txt
+```bash
+less <nomefile> | sort > risultato.txt
 ```
 
 </div>
 
-### 4.3. Finding words in a text file
+### 4.3. Trovare parole in un file di testo
 
-To look for specific words in a text file, use the command
+Per cercare parole specifiche in un file di testo, usa il comando
 
-``` {.sourceCode .bash}
-grep <word> <filename>
+```bash
+grep <parola> <nomefile>
 ```
 
-It produces all lines from the given file that contain the given word.
-The `grep` command is very powerful and can handle Regular Expressions.
+Esso mostra tutte le righe dal file dato che contengono la parola data.
+Il comando `grep` è molto potente e può gestire le espressioni regolari.
 
-To find the **13th character**, search for the word **fire** in the file
-`datascience.txt` and take the **first** character of the output.
+Per trovare **il carattere 13°**, cerca la parola **fire** nel file
+`datascience.txt` e prendi il **primo** carattere dell'output.
 
 <div class="admonition hint">
 
-You can search through many files at once by including a \* in the
-filename.
+Puoi cercare attraverso molti file contemporaneamente includendo un \* nel
+nomefile.
 
 </div>
 
 <div class="admonition warning">
 
-The last two exercises may not work on Git Bash.
+Le ultime due esercitazioni potrebbero non funzionare su Git Bash.
 
 </div>
 
 ----
 
-## 5. Unzip files
+## 5. Scompattare file
 
-Please go to the directory exercise\_5.
+Vai alla directory `exercise_5`.
 
-### 5.1. unzipping archives
+### 5.1. Decomprimere archivi
 
-Unzipping compressed files is a very basic and important task. On Unix,
-you often encounter WinZip archives, .tar archives and .gz compressed
-files. For unpacking Win zip files, use
+Decomprimere file compressi è un compito molto basilare ed importante. Su Unix,
+spesso si incontrano archivi WinZip, archivi .tar e file compressi .gz. Per scompattare file zip di Win,
+usa
 
-``` {.sourceCode .bash}
-unzip <filename>
+```bash
+unzip <nomefile>
 ```
 
-for .tar and .tar.gz files
+per file .tar e .tar.gz
 
-``` {.sourceCode .bash}
-tar -xf <filename>
+```bash
+tar -xf <nomefile>
 ```
 
-and for .gz files,
+e per file .gz,
 
-``` {.sourceCode .bash}
-gunzip <filename>
+```bash
+gunzip <nomefile>
 ```
 
-The **14th and 15th character** of the solution are in a multiply
-wrapped archive in the exercise\_5 directory.
+Il **14° e 15° carattere** della soluzione sono in un archivio multiplo
+avvolto nella directory `exercise_5`.
 
 <div class="admonition hint">
 
-To pack a directory and everything within, you can use the command
+Per imballare una directory e tutto ciò che contiene, puoi usare il comando
 
-``` {.sourceCode .bash}
+```bash
 tar -cf backup.tar <directory>
 ```
 
-To subsequently compress it, use
+Per comprimerlo successivamente, usa
 
-``` {.sourceCode .bash}
+```bash
 gzip backup.tar
 ```
 
@@ -361,184 +360,180 @@ gzip backup.tar
 
 ----
 
-## 6. Command-line tools
+## 6. Strumenti da riga di comando
 
-Please go to the directory `exercise_6`.
+Vai alla directory `exercise_6`.
 
-### 6.1. Changing file access rights
+### 6.1. Modifica dei diritti di accesso ai file
 
-Each file on Unix has separate permissions for reading 'r', writing 'w',
-and executing 'x'. Displaying them with:
+Ogni file su Unix ha permessi separati per la lettura 'r', scrittura 'w',
+ed esecuzione 'x'. Visualizzarli con:
 
-``` {.sourceCode .bash}
+```bash
 ls -l
 ```
 
-There is one triplet of permissions for the owner of the file owner, one
-triplet for a group of users, and one for all others. The `chmod`
-command allows to change these permissions, e.g.
+C'è un tripletto di permessi per il proprietario del file, uno
+tripletto per un gruppo di utenti e uno per tutti gli altri. Il comando `chmod`
+permette di cambiare questi permessi, ad esempio
 
-``` {.sourceCode .bash}
-chmod a+x <filename>
+```bash
+chmod a+x <nomefile>
 ```
 
-grants all users the permission to execute a file, while chmod u-w
-forbids the current user (oneself) to write to the file (thereby
-protecting it from being deleted accidentally).
+concede a tutti gli utenti il permesso di eseguire un file, mentre `chmod u-w`
+impedisce all'utente corrente (se stesso) di scrivere nel file (proteggendolo dall'eliminazione accidentale).
 
-To see **characters 16+17** of the solution, make the program
-`permissions.sh` executable. Then execute it with:
+Per vedere **i caratteri 16 e 17** della soluzione, rendi il
 
-``` {.sourceCode .bash}
+ programma
+`permissions.sh` eseguibile. Quindi eseguilo con:
+
+```bash
 ./permissions.sh
 ```
 
 <div class="admonition hint">
 
-You can grant permissions for a whole directory tree using
+Puoi concedere i permessi per un'intera struttura di directory usando
 
-``` {.sourceCode .bash}
+```bash
 chmod -R a+x <directory>
 ```
 
 </div>
 
-### 6.2. How much disk space have I left?
+### 6.2. Quanto spazio su disco ho lasciato?
 
-To find out, how much disk space you have left, you can use the command
+Per scoprire quanto spazio su disco ti resta, puoi usare il comando
 
-``` {.sourceCode .bash}
+```bash
 df
 ```
 
-`df` lists all hard drive partitions, CD-ROMs, pendrives and some
-logical partitions Unix uses. All numbers are given in kilobyte (1000
-byte or one 1000000th GB).
+`df` elenca tutte le partizioni del disco rigido, i CD-ROM, le pen drive e alcune
+partizioni logiche che Unix utilizza. Tutti i numeri sono dati in kilobyte (1000
+byte o un milionesimo di GB).
 
-To obtain the **18th character**, check out the version of the `df`
-program. Find out how to do that with:
+Per ottenere il **18° carattere**, controlla la versione del programma `df`.
+Scoprilo con:
 
-``` {.sourceCode .bash}
+```bash
 df --help
 ```
 
-The solution is the last character of the first authors' first name.
+La soluzione è l'ultimo carattere del nome del primo autore.
 
-### 6.3. Set an environment variable
+### 6.3. Impostare una variabile d'ambiente
 
-To install some programs, it is necessary to set so-called environment
-variables. These can be set using the command
+Per installare alcuni programmi, è necessario impostare le cosiddette variabili d'ambiente. Queste possono essere impostate usando il comando
 
-``` {.sourceCode .bash}
-export <variable-name>=<value>
+```bash
+export <nome-variabile>=<valore>
 ```
 
-You can see all variables by the command
+Puoi vedere tutte le variabili con il comando
 
-``` {.sourceCode .bash}
+```bash
 env
 ```
 
-To obtain the **19th character**, you need to use `export` to set the
-variable *GIVEME* to the value **SOLUTION**.
+Per ottenere il **19° carattere**, devi usare `export` per impostare la
+variabile *GIVEME* al valore **SOLUTION**.
 
-``` {.sourceCode .bash}
+```bash
 echo $GIVEME
 ```
 
-Find out the **characters position in the alphabet** with:
+Scopri la **posizione del carattere nell'alfabeto** con:
 
-``` {.sourceCode .bash}
+```bash
 echo $GIVEME | wc -c
 ```
 
 <div class="admonition hint">
 
-By default, changes to environment variables only affect the current
-terminal.
-
-If you want to set environment variables for each console window, write
-the export command to the file `.bashrc` in your home directory (it is a
-hidden file).
+Per impostare variabili d'ambiente solo per la finestra della console attuale, scrivi
+il comando di esportazione nel file `.bashrc` nella tua directory home (è un
+file nascosto).
 
 </div>
 
-### 6.4. Check whether you have internet
+### 6.4. Controllare se hai una connessione internet
 
-The easiest way to check from the Unix command line whether the internet
-connection works, is to send a request to a known server (e.g.
-www.spiced-academy.com) using the command
+Il modo più semplice per verificare dalla riga di comando di Unix se la connessione
+a Internet funziona, è inviare una richiesta a un server conosciuto (ad es.
+www.spiced-academy.com) usando il comando
 
-``` {.sourceCode .bash}
-ping <web address>
+```bash
+ping <indirizzo-web>
 ```
 
-The command reports, how long a message takes back and forth to the
-given server. To interrupt the messages, press Ctrl+C. You can use the
-program
+Il comando riporta quanto tempo impiega un messaggio per andare e tornare dal
+server dato. Per interrompere i messaggi, premi Ctrl+C. Puoi usare il
+programma
 
-``` {.sourceCode .bash}
+```bash
 ./check_ping
 ```
 
-The **20th character** is the `ping` option that sets the maximum number
-of requests sent. Check the documentation with:
+Il **20° carattere** è l'opzione `ping` che imposta il numero massimo
+di richieste inviate. Verifica la documentazione con:
 
-``` {.sourceCode .bash}
+```bash
 man ping
 ```
 
-### 6.5. Managing processes
+### 6.5. Gestione dei processi
 
-To see what programs are running on your machine, type
+Per vedere quali programmi sono in esecuzione sulla tua macchina, digita
 
-``` {.sourceCode .bash}
+```bash
 top
 ```
 
-It displays you a list of all currently active programs. *Shift+P* sorts
-them by the CPU time they are using, *Shift+M* by the amount of memory
-they are using (if you don't see any program consuming lots of memory,
-start a web browser). Quit `top` by pressing *q*.
+Mostra un elenco di tutti i programmi attualmente attivi. *Shift+P* li ordina per
+il tempo della CPU che stanno utilizzando, *Shift+M* per la quantità di memoria
+che stanno utilizzando (se non vedi nessun programma che consuma molta memoria,
+avvia un browser web). Esci da `top` premendo *q*.
 
-The **last two characters** of the solution are the first two characters
-of the second word in the line containing the column labels.
+Gli **ultimi due caratteri** della soluzione sono i primi due caratteri
+della seconda parola nella riga che contiene le etichette delle colonne.
 
 <div class="admonition hint">
 
-If you want to get rid of one of the programs you started (e.g. because
-it crashed), you can do so by typing
+Se vuoi eliminare uno dei programmi che hai avviato (ad es. perché
+si è bloccato), puoi farlo digitando
 
-``` {.sourceCode .bash}
+```bash
 kill -s 9 <pid>
 ```
 
 </div>
 
-You find the pid number in the first column of the *top* output. Of
-course, you may only interrupt your own programs, not those owned by
-*root*, the system administrator.
+Trovi il numero pid nella prima colonna dell'output di *top*. Naturalmente,
+puoi interrompere solo i tuoi programmi, non quelli di
+*root*, l'amministratore di sistema.
 
 ----
 
-### License
+### Licenza
 
 **© 2010 Dr. Kristian Rother**
 
-This tutorial is published under the Creative Commons Attribution
-Share-alike License 4.0
+Questo tutorial è pubblicato sotto la Licenza Creative Commons Attribution
+Condividi allo stesso modo 4.0
 
-You can find the full sources on
+Puoi trovare tutte le fonti su
 [<https://github.com/krother/bash_tutorial>](https://github.com/krother/bash_tutorial).
 
-### Acknowledgements
+### Ringraziamenti
 
-I thank Janusz M. Bujnicki, Allegra Via, Pedro Fernandes and Joachim
-Jacob for their help with testing and reviewing the material. Further
-thanks go to the German Academic Exchange Service (DAAD) for financial
-support.
+Ringrazio Janusz M. Bujnicki, Allegra Via, Pedro Fernandes e Joachim
+Jacob per il loro aiuto con il testing e la revisione del materiale. Altri
+ringraziamenti vanno al Servizio Tedesco di Scambio Accademico (DAAD) per il supporto finanziario.
 
-### Contact
+### Contatti
 
 Dr. Kristian Rother
 
