@@ -269,7 +269,7 @@ usando
 less <nomefile> | sort
 ```
 
-Il simbolo '|' è chiamato tubo ed è spesso usato per collegare programmi Unix
+Il simbolo '|' è chiamato pipe (tubo) ed è spesso usato per collegare programmi Unix
 tra loro. Il **12° carattere** della soluzione è il primo carattere dell'ultima parola nel file
 elephant.txt ordinato alfabeticamente.
 
