@@ -29,7 +29,7 @@ Tutti i caratteri sono nascosti negli esercizi seguenti.
 
 ## Preparativi
 
-* clona il repository o scarica il codice come file ZIP
+* clona il repository
 * individua la cartella `exercises/`
 * apri un terminale `bash`
 
