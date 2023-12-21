@@ -1,4 +1,3 @@
+Hey... lo sapevi ...
 
-Hey, did you know ...
-
-The solution to this exercise is an animal.
+La soluzione a questo esercizio è un animale.
